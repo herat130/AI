@@ -4,3 +4,4 @@ export default function demo() {
 }
 export { Button } from "./stories/Button";
 export { Paragraph } from "./stories/Paragraph";
+export { NavBar } from "./stories/NavBar";

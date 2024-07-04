@@ -29,8 +29,9 @@ function App() {
   return (
     <>
       <Button label="From Storybook" primary={true} />
+      <Paragraph text="here is Paragraph From Storybook" />
+      <NavBar />
       <h1>List of Photos</h1>
-      <Paragraph label="here is Paragraph" />
       {photos.map((photo) => {
         return (
           <div key={photo?.id}>

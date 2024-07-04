@@ -22,4 +22,7 @@
 "dependencies": {
     "ui-library": "file:../ui-library"
   },
-- npm install
+- npm install in root directory
+- npx lerna repair [after updating lerna version]
+- npx lerna clean -- to clear all missconfiguration
+- npx lerna publish [To publish all dependecies which got changed]
