@@ -4211,7 +4211,7 @@ dargs@^7.0.0:
   integrity sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==
 
 "data-layer@file:../data-layer", "data-layer@file:/Users/herat/Documents/Repo/practice/AI/packages/data-layer":
-  version "0.0.1"
+  version "0.0.2"
   resolved "file:packages/data-layer"
 
 dateformat@^3.0.3:
@@ -7605,7 +7605,7 @@ punycode@^2.1.0:
   integrity sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==
 
 "pwa-app@file:/Users/herat/Documents/Repo/practice/AI/packages/pwa-app":
-  version "0.0.1"
+  version "0.0.2"
   resolved "file:packages/pwa-app"
   dependencies:
     data-layer "file:../data-layer"
@@ -8788,7 +8788,7 @@ uglify-js@^3.1.4:
   integrity sha512-SyVVbcNBCk0dzr9XL/R/ySrmYf0s372K6/hFklzgcp2lBFyXtw4I7BOdDjlLhE1aVqaI/SHWXWmYdlZxuyF38A==
 
 "ui-library@file:../ui-library", "ui-library@file:/Users/herat/Documents/Repo/practice/AI/packages/ui-library":
-  version "0.0.1"
+  version "0.0.2"
   resolved "file:packages/ui-library"
 
 undici-types@~5.26.4:

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 // @ts-ignore: Unreachable code error
 // import demo from "ui-library";
-import { Button, Paragraph } from "ui-library";
+import { Button, Paragraph, NavBar } from "ui-library";
 // @ts-ignore: Unreachable code error
 import { fetchData } from "data-layer";
 
