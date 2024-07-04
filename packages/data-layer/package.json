@@ -1,0 +1,19 @@
+{
+  "name": "data-layer",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "herat130 <herat130@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./__tests__/data-layer.test.js"
+  }
+}
