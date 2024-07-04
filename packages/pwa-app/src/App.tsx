@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 // @ts-ignore: Unreachable code error
 // import demo from "ui-library";
-import { Button } from "ui-library";
+import { Button, Paragraph } from "ui-library";
 // @ts-ignore: Unreachable code error
 import { fetchData } from "data-layer";
 
@@ -30,6 +30,7 @@ function App() {
     <>
       <Button label="From Storybook" primary={true} />
       <h1>List of Photos</h1>
+      <Paragraph label="here is Paragraph" />
       {photos.map((photo) => {
         return (
           <div key={photo?.id}>

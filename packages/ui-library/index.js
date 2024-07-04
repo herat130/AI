@@ -3,3 +3,4 @@ export default function demo() {
   alert("demo");
 }
 export { Button } from "./stories/Button";
+export { Paragraph } from "./stories/Paragraph";

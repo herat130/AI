@@ -1,6 +1,6 @@
 ## Project
 
-# Chat GPT Clone
+# ChatGPT Clone
 
 - storybook
 - styled component
