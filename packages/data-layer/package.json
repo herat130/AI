@@ -16,5 +16,5 @@
   "scripts": {
     "test": "node ./__tests__/data-layer.test.js"
   },
-  "gitHead": "789483e9c4b5e22f43864b9b8d09575bc8e0c31e"
+  "gitHead": "230de3bab8bcc7d7917615c369264393af45c16f"
 }
