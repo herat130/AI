@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 // @ts-ignore: Unreachable code error
 // import demo from "ui-library";
-import { Button, Paragraph, NavBar } from "ui-library";
+import { Button, Paragraph, NavBar,Input } from "ui-library";
 // @ts-ignore: Unreachable code error
 import { fetchData, demo } from "data-layer";
 
@@ -31,6 +31,7 @@ function App() {
       <Button label="From Storybook" primary={true} />
       <Paragraph text="here is Paragraph From Storybook" />
       <NavBar />
+      <Input />
       <h1>List of Photos</h1>
       {photos.map(() => {
         return (

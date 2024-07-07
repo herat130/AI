@@ -14,7 +14,8 @@
     "lib"
   ],
   "scripts": {
-    "test": "node ./__tests__/data-layer.test.js"
+    "test": "node ./__tests__/data-layer.test.js",
+    "dev": "node index.js"
   },
   "gitHead": "789483e9c4b5e22f43864b9b8d09575bc8e0c31e"
 }
