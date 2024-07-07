@@ -4,13 +4,13 @@ import "./App.css";
 // import demo from "ui-library";
 import { Button, Paragraph, NavBar } from "ui-library";
 // @ts-ignore: Unreachable code error
-import { fetchData } from "data-layer";
+import { fetchData, demo } from "data-layer";
 
 function App() {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    // demo();
+    demo();
     const fetchAlbum = async () => {
       const data = await fetchData({
         url: "https://jsonplaceholder.typicode.com/photos?albumId=1",
@@ -32,10 +32,11 @@ function App() {
       <Paragraph text="here is Paragraph From Storybook" />
       <NavBar />
       <h1>List of Photos</h1>
-      {photos.map((photo) => {
+      {photos.map(() => {
         return (
-          <div key={photo?.id}>
-            <img src={photo?.thumbnailUrl} alt={photo?.title} />
+          <div key={1}>
+          {/* <div key={photo?.id}> */}
+            {/* <img src={photo?.thumbnailUrl} alt={photo?.title} /> */}
           </div>
         );
       })}
