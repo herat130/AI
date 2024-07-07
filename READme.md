@@ -5,7 +5,10 @@ frontend project which has clone of chat GPT
 ## Frontend techstack involved
 
 - React
+- vite
+- lerna for package manager
 - Storybook
+- Styled components
 - typescript
 - jest
 - cypress
@@ -23,17 +26,6 @@ frontend project which has clone of chat GPT
   - data layer package
   - main pwa app for GPT clone.
 ![package architecture](https://github.com/herat130/AI/blob/master/dependecy_graph.png)
-
-# ChatGPT Clone
-
-- storybook
-- styled component
-- React + vite [nextJS]
-
-# API
-
-- node + express
-- connect to open API
 
 ## Configure steps
 
