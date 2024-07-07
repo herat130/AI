@@ -4,10 +4,9 @@
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {
-    "nx": "^19.4.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "nx": "^19.4.1",
     "lerna": "^8.1.5"
   }
 }

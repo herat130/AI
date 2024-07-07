@@ -1,13 +1,28 @@
-## Project
+## Project Description
 
-## About project architecture
-![package architecture](https://github.com/herat130/AI/blob/master/dependecy_graph.png)
+frontend project which has clone of chat GPT
+
+## Frontend techstack involved
+
+- React
+- Storybook
+- typescript
+- jest
+- cypress
+
+## backend techstack
+
+- express
+- node
+- thrid party endpoint
+
+## About Frontend project architecture
 
 - mono repo with packages
   - component library package
   - data layer package
   - main pwa app for GPT clone.
-  
+![package architecture](https://github.com/herat130/AI/blob/master/dependecy_graph.png)
 
 # ChatGPT Clone
 
@@ -24,6 +39,7 @@
 
 - npx lerna init
 - npm install
+- npm i -d nx
 - npx lerna create ui-library
 - git config  --global user.name "herat130"
 - git config  --global user.email "<herat130@gmail.com>"
