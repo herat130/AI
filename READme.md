@@ -1,12 +1,13 @@
 ## Project
 
 ## About project architecture
+![package architecture](https://github.com/herat130/AI/blob/master/dependecy_graph.png)
+
 - mono repo with packages
   - component library package
   - data layer package
   - main pwa app for GPT clone.
-
-  ![package architecture](http://url/to/img.png)
+  
 
 # ChatGPT Clone
 
