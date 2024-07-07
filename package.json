@@ -8,7 +8,8 @@
     "dev": "concurrently --kill-others \"npm run dev:ui-library\" \"npm run dev:pwa\"",
     "dev:ui-library": "npx lerna run dev --scope ui-library",
     "dev:pwa": "npx lerna run dev --scope pwa-app",
-    "build:pwa": "npx lerna run build --scope pwa-app --include-filtered-dependencies"
+    "build:pwa": "npx lerna run build --scope pwa-app --include-filtered-dependencies",
+    "clean": "npm cache clean --force && npm prune && npm ci"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
