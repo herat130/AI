@@ -13,6 +13,7 @@ frontend project which has clone of chat GPT
 - Docker
 - jest
 - cypress
+- SSR on later stage
 
 ## backend techstack
 
