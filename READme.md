@@ -10,6 +10,7 @@ frontend project which has clone of chat GPT
 - Storybook
 - Styled components
 - typescript
+- Docker
 - jest
 - cypress
 
