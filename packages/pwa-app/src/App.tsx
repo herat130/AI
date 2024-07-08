@@ -1,48 +1,30 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-// @ts-ignore: Unreachable code error
-// import demo from "ui-library";
-import { Button, Paragraph, NavBar,Input } from "ui-library";
-// @ts-ignore: Unreachable code error
-import { fetchData, demo } from "data-layer";
+import React, { Suspense } from "react";
+import { lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+import Loader from "./components/Layout/Loader";
+import Layout from "./components/Layout/Layout";
 
-function App() {
-  const [photos, setPhotos] = useState([]);
+const Home = lazy(() => import("./containers/Home"));
+const About = lazy(() => import("./containers/About"));
+const PageNotFound = lazy(() => import("./containers/PageNotFound"));
 
-  useEffect(() => {
-    demo();
-    const fetchAlbum = async () => {
-      const data = await fetchData({
-        url: "https://jsonplaceholder.typicode.com/photos?albumId=1",
-        method: "get",
-      });
-      console.log({ data });
-      setPhotos(data);
-    };
-    fetchAlbum();
-  }, []);
-
-  if (photos.length <= 0) {
-    return <p>photos loading....</p>;
-  }
-
+export default function App() {
   return (
     <>
-      <Button label="From Storybook" primary={true} />
-      <Paragraph text="here is Paragraph From Storybook" />
-      <NavBar />
-      <Input />
-      <h1>List of Photos</h1>
-      {photos.map(() => {
-        return (
-          <div key={1}>
-          {/* <div key={photo?.id}> */}
-            {/* <img src={photo?.thumbnailUrl} alt={photo?.title} /> */}
-          </div>
-        );
-      })}
+      <Layout>
+        <Routes>
+          <Route
+            element={
+              <Suspense fallback={<Loader />}>
+                <About />
+              </Suspense>
+            }
+            path="/about"
+          />
+          <Route element={<Home />} path="/" />
+          <Route element={<PageNotFound />} path="*" />
+        </Routes>
+      </Layout>
     </>
   );
 }
-
-export default App;

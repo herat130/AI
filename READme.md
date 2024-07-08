@@ -50,3 +50,7 @@ frontend project which has clone of chat GPT
 - npx lerna add-caching to create nx file for caching commands like build , run , test etc...
 - update lerna for independent versioning
 - use of concurrently to execute both the server of pwa and ui-library application
+
+## add specific package to targeted internal package
+
+- npm i react-router-dom --workspace=pwa-app
