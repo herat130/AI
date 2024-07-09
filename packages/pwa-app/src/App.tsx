@@ -9,6 +9,8 @@ const About = lazy(() => import("./containers/About"));
 const PageNotFound = lazy(() => import("./containers/PageNotFound"));
 
 export default function App() {
+  // test error boundary
+  // throw new Error('Something wrong is happening')
   return (
     <>
       <Layout>

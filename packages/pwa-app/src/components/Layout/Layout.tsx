@@ -8,21 +8,41 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Button = styled.button`
-  color: #fff;
-  background-color: #6b1414;
-  border: 1px solid #fff;
-  border-radius: 6px;
+const LayoutWrapper = styled.div`
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem 0;
+  gap: 1rem;
+`;
+
+const Main = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 1rem;
+  gap: 1rem;
 `;
 
 export default function Layout({ children }: Props) {
   return (
-    <div>
-      <Header />
-      <SideBar />
-      <div>{children}</div>
-      <Button>using styled component</Button>
-      <Footer />
-    </div>
+    <>
+      <LayoutWrapper>
+        <SideBar />
+        <Main>
+          <Header />
+          <div>{children}</div>
+        </Main>
+        <Footer />
+      </LayoutWrapper>
+      {/* <Button>using styled component</Button> */}
+    </>
   );
 }
