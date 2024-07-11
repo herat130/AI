@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { lsHelper } from "../helpers/localStorageHelper";
 
 type Theme = "light" | "dark";
 
@@ -18,14 +19,25 @@ type Props = {
   children: React.ReactNode;
 };
 
-function updateToggle(theme: Theme) {
+function switchTheme(theme: Theme) {
   return theme === "dark" ? "light" : "dark";
 }
 
-export function ThemeProvider({ children }: Props) {
-  const [theme, setTheme] = useState<Theme>("light");
+const LOCAL_STORAGE_THEME_KEY = "theme";
 
-  const toggleTheme = () => setTheme(updateToggle);
+export function ThemeProvider({ children }: Props) {
+  const lsTheme = lsHelper.getLocalStorageItem({
+    key: LOCAL_STORAGE_THEME_KEY,
+  });
+  const [theme, setTheme] = useState<Theme>(lsTheme || "light");
+
+  const toggleTheme = () => {
+    lsHelper.setLocalStorageItem({
+      key: LOCAL_STORAGE_THEME_KEY,
+      value: switchTheme(theme),
+    });
+    setTheme(switchTheme);
+  };
 
   const value = { theme, toggleTheme };
 

@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import SideBar from "./SideBar";
 import styled from "styled-components";
-import { ThemeContext } from "../../utils/themeContext";
+import { ThemeContext } from "../../utils/context/themeContext";
 
 type Props = {
   children: React.ReactNode;
