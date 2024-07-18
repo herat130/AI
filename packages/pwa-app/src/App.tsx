@@ -23,7 +23,14 @@ export default function App() {
             }
             path="/about"
           />
-          <Route element={<Home />} path="/" />
+          <Route
+            element={
+              <Suspense fallback={<Loader />}>
+                <Home />
+              </Suspense>
+            }
+            path="/"
+          />
           <Route element={<PageNotFound />} path="*" />
         </Routes>
       </Layout>

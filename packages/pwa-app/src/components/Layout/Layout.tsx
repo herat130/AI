@@ -1,6 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Header from "./Header";
-import Footer from "./Footer";
 import SideBar from "./SideBar";
 import styled from "styled-components";
 import { ThemeContext } from "../../utils/context/themeContext";
@@ -17,22 +16,19 @@ const LayoutWrapper = styled.main`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 1rem 0;
-  gap: 1rem;
+  /* padding: 0 1rem 0; */
 `;
 
 const Content = styled.section`
   display: flex;
+  flex-basis: 85%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   min-height: 100vh;
-  padding: 1rem;
-  gap: 1rem;
 `;
 
 export default function Layout({ children }: Props) {
-  
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
@@ -41,11 +37,9 @@ export default function Layout({ children }: Props) {
         <SideBar />
         <Content>
           <Header toggleTheme={toggleTheme} theme={theme} />
-          <div>{children}</div>
+          {children}
         </Content>
-        {/* <Footer /> */}
       </LayoutWrapper>
-      {/* <Button>using styled component</Button> */}
     </>
   );
 }

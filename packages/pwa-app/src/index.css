@@ -31,3 +31,17 @@ main {
   background-color: var(--theme-background-color);
   color: var(--theme-font-color);
 }
+
+a {
+  color: var(--theme-font-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:visited {
+  color: var(--theme-font-color);
+}
+
+a:active{
+  color: blue;
+}

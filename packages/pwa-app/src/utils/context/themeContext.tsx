@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { lsHelper } from "../helpers/localStorageHelper";
 
-type Theme = "light" | "dark";
+export type Theme = "light" | "dark";
 
 type ThemeContext = {
   theme: Theme;
