@@ -32,14 +32,12 @@ export default function Layout({ children }: Props) {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <>
-      <LayoutWrapper data-theme={theme}>
-        <SideBar />
-        <Content>
-          <Header toggleTheme={toggleTheme} theme={theme} />
-          {children}
-        </Content>
-      </LayoutWrapper>
-    </>
+    <LayoutWrapper data-theme={theme}>
+      <SideBar />
+      <Content>
+        <Header toggleTheme={toggleTheme} theme={theme} />
+        {children}
+      </Content>
+    </LayoutWrapper>
   );
 }

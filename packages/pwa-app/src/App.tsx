@@ -1,39 +1,23 @@
 import React, { Suspense } from "react";
-import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Loader from "./components/Layout/Loader";
 import Layout from "./components/Layout/Layout";
-
-const Home = lazy(() => import("./pages/Home/Home"));
-const About = lazy(() => import("./pages/About/About"));
-const PageNotFound = lazy(() => import("./pages/PageNotFound/PageNotFound"));
+import { publicRoutes } from "./routes/routes";
 
 export default function App() {
   // test error boundary
   // throw new Error('Something wrong is happening')
   return (
-    <>
-      <Layout>
-        <Routes>
+    <Layout>
+      <Routes>
+        {publicRoutes.map(({ id, path, element }) => (
           <Route
-            element={
-              <Suspense fallback={<Loader />}>
-                <About />
-              </Suspense>
-            }
-            path="/about"
+            key={id}
+            element={<Suspense fallback={<Loader />}>{element}</Suspense>}
+            path={path}
           />
-          <Route
-            element={
-              <Suspense fallback={<Loader />}>
-                <Home />
-              </Suspense>
-            }
-            path="/"
-          />
-          <Route element={<PageNotFound />} path="*" />
-        </Routes>
-      </Layout>
-    </>
+        ))}
+      </Routes>
+    </Layout>
   );
 }

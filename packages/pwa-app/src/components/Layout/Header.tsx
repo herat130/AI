@@ -7,10 +7,8 @@ import { Theme } from "../../utils/context/themeContext";
 
 const HeaderWarapper = styled.header`
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
-  height: 3rem;
-  /* padding: 0.5rem; */
+  height: 4rem;
   gap: 1rem;
   width: 100%;
   border-bottom: 1px solid #ddd;

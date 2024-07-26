@@ -61,6 +61,7 @@ const TypingEffect = styled.p`
 `;
 
 export default function Home() {
+  return null;
   return (
     <ContentWrpper>
       <h2>This is Home page</h2>
@@ -73,10 +74,12 @@ export default function Home() {
           possimus aliquam? Porro obcaecati culpa earum!
         </TypingEffect>
       </AnswerSection> */}
-      <TypeWriter
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dicta commodi odit ab ex? Ratione omnis odit incidunt, nemo velit ex adipisci veritatis iure voluptates architecto nobis eligendi quasi consequuntur."
-        speed={100}
-      />
+      {/* <TypingEffect> */}
+        <TypeWriter
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dicta commodi odit ab ex? Ratione omnis odit incidunt, nemo velit ex adipisci veritatis iure voluptates architecto nobis eligendi quasi consequuntur."
+          speed={100}
+        />
+      {/* </TypingEffect> */}
       {/* <div> */}
       <textarea
         style={{

@@ -11,12 +11,13 @@ export default function TypeWriter({ text = "", speed = 100 }: Props) {
   useEffect(() => {
     let index = 0;
     const intervalId = window.setInterval(() => {
-      if (index < text.length) {
+      if (index < text.split(" ").length - 1) {
         setTypingText((typingText) =>
           typingText.concat(` ${text.split(" ")[index]}`)
         );
         index++;
       } else {
+        console.log("clear interval");
         clearInterval(intervalId);
       }
     }, speed);
