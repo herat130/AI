@@ -1,4 +1,10 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+
+
+const TypeWriterWrapper= styled.div`
+    width: 800px;
+`;
 
 type Props = {
   text: string;
@@ -28,5 +34,5 @@ export default function TypeWriter({ text = "", speed = 100 }: Props) {
     };
   }, []);
 
-  return <div>{typingText}</div>;
+  return <TypeWriterWrapper>{typingText}</TypeWriterWrapper>;
 }

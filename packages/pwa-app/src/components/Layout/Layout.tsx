@@ -16,7 +16,6 @@ const LayoutWrapper = styled.main`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  /* padding: 0 1rem 0; */
 `;
 
 const Content = styled.section`

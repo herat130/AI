@@ -1,99 +1,48 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "ui-library";
+import { Button, Paragraph } from "ui-library";
 import TypeWriter from "../../components/TypeWriter";
 
 const ContentWrpper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   min-height: 100%;
   padding: 1rem;
-  gap: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `;
 
-const AnswerSection = styled.div`
-  /* min-height: 650px; */
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 24px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.15em solid black;
-  /* height: 600px; */
-`;
-
-const TypingEffect = styled.p`
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: 24px;
-  white-space: pre-wrap; /* Ensure the text wraps to multiple lines */
-  overflow: hidden;
-  border-right: 0.15em solid black; /* Adjust the color and size as needed */
-  animation:
-    typing 4s steps(40, end),
-    blink-caret 0.75s step-end infinite;
-  /* height: 100%; */
-  /* width: 100%; */
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-
-  /* Blinking cursor effect */
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: black;
-    }
-  }
+const Content = styled.div`
+  width: 800px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
 `;
 
 export default function Home() {
-  return null;
   return (
     <ContentWrpper>
-      <h2>This is Home page</h2>
-      <Button primary={true} label="UI LIB" />
-      {/* <AnswerSection>
-        <TypingEffect>
-          This is answer div Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Quibusdam maxime, et nesciunt optio rem non! Aliquam
-          consequuntur ipsa saepe reprehenderit fuga ducimus natus! Eius,
-          possimus aliquam? Porro obcaecati culpa earum!
-        </TypingEffect>
-      </AnswerSection> */}
-      {/* <TypingEffect> */}
+      <Content>
+        <h2>This is Home page</h2>
+        <Button primary={true} label="UI LIB" />
+        <Paragraph text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius alias ut numquam sint id! Dolorem velit quibusdam sapiente? Doloribus perspiciatis placeat hic quis ipsam illum minus, dicta ab! Deserunt voluptatibus pariatur quos doloribus amet iure nihil, laborum cupiditate, corrupti ullam aut, tempore at. Dolorem ratione enim vero iure! Minus, omnis!" />
         <TypeWriter
           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dicta commodi odit ab ex? Ratione omnis odit incidunt, nemo velit ex adipisci veritatis iure voluptates architecto nobis eligendi quasi consequuntur."
           speed={100}
         />
-      {/* </TypingEffect> */}
-      {/* <div> */}
-      <textarea
-        style={{
-          alignItems: "flex-end",
-          flexBasis: "90%",
-          width: "90%",
-          minHeight: "80px",
-        }}
-        name="question"
-        id="question"
-        title="please ask your question here"
-        placeholder="ask question..."
-      ></textarea>
-      {/* </div> */}
+        <textarea
+          style={{
+            alignItems: "flex-end",
+            flexBasis: "90%",
+            width: "800px",
+            minHeight: "60px",
+          }}
+          name="question"
+          id="question"
+          title="please ask your question here"
+          placeholder="ask question..."
+        ></textarea>
+      </Content>
     </ContentWrpper>
   );
 }
