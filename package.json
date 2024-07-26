@@ -6,8 +6,9 @@
   ],
   "scripts": {
     "dev": "concurrently --kill-others \"npm run dev:ui-library\" \"npm run dev:pwa\"",
-    "dev:ui-library": "npx lerna run dev --scope ui-library",
+    "dev:ui-library": "npx lerna run storybook --scope ui-library",
     "dev:pwa": "npx lerna run dev --scope pwa-app",
+    "dev:story": "npx lerna run dev --scope ui-library",
     "build:pwa": "npx lerna run build --scope pwa-app --include-filtered-dependencies",
     "clean": "npm cache clean --force && npm prune && npm ci"
   },

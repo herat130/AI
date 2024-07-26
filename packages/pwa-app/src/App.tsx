@@ -4,9 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import Loader from "./components/Layout/Loader";
 import Layout from "./components/Layout/Layout";
 
-const Home = lazy(() => import("./containers/Home"));
-const About = lazy(() => import("./containers/About"));
-const PageNotFound = lazy(() => import("./containers/PageNotFound"));
+const Home = lazy(() => import("./pages/Home/Home"));
+const About = lazy(() => import("./pages/About/About"));
+const PageNotFound = lazy(() => import("./pages/PageNotFound/PageNotFound"));
 
 export default function App() {
   // test error boundary
