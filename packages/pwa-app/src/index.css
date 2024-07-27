@@ -8,6 +8,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 [data-theme="dark"] {
   --theme-background-color: #000;
   --theme-font-color: #fff;
@@ -37,6 +42,6 @@ a:visited {
   color: var(--theme-font-color);
 }
 
-a:active{
+a:active {
   color: blue;
 }

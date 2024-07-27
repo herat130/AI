@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-
-const TypeWriterWrapper= styled.div`
-    width: 800px;
+const TypeWriterWrapper = styled.div`
+  width: 100%;
+  text-align: left;
 `;
 
 type Props = {
@@ -34,5 +34,9 @@ export default function TypeWriter({ text = "", speed = 100 }: Props) {
     };
   }, []);
 
-  return <TypeWriterWrapper>{typingText}</TypeWriterWrapper>;
+  return (
+    <TypeWriterWrapper>
+      <p style={{ textAlign: "left" }}>{typingText}</p>
+    </TypeWriterWrapper>
+  );
 }
