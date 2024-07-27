@@ -27,6 +27,16 @@ const Content = styled.section`
   min-height: 100vh;
 `;
 
+const ContentWrpper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+`;
+
 export default function Layout({ children }: Props) {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -35,7 +45,7 @@ export default function Layout({ children }: Props) {
       <SideBar />
       <Content>
         <Header toggleTheme={toggleTheme} theme={theme} />
-        {children}
+        <ContentWrpper>{children}</ContentWrpper>
       </Content>
     </LayoutWrapper>
   );

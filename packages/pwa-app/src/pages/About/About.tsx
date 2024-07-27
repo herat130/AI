@@ -4,7 +4,7 @@ export default function About() {
   // throw new Error('About page issue')
   return (
     <div>
-      <p>This is About page</p>
+      <h2>This is About page</h2>
     </div>
   )
 }

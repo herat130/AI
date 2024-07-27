@@ -24,18 +24,20 @@ export default function Header({ toggleTheme, theme }: Props) {
   return (
     <HeaderWarapper>
       <Link to="/">Home</Link>
-      <Link to="/about">About</Link>      
+      <Link to="/about">About</Link>
       {theme === "light" ? (
         <SunIconDark
-          width={24}
-          height={24}
+          cursor={"pointer"}
+          width={26}
+          height={26}
           onClick={toggleTheme}
           className="size-6 text-blue-500"
         />
       ) : (
         <SunIconLight
-          width={24}
-          height={24}
+          cursor={"pointer"}
+          width={26}
+          height={26}
           onClick={toggleTheme}
           className="size-6 text-blue-500"
         />
