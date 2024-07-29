@@ -55,3 +55,7 @@ frontend project which has clone of chat GPT
 ## add specific package to targeted internal package
 
 - npm i react-router-dom --workspace=pwa-app
+
+## adding jest support
+
+- video ref [https://egghead.io/lessons/jest-adding-jest-with-typescript-support-to-a-vite-application]
