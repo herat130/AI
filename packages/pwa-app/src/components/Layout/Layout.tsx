@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Header from "./Header";
 import SideBar from "./SideBar";
 import styled from "styled-components";
-import { ThemeContext } from "../../utils/context/themeContext";
+import { ThemeContext } from "../../utils/context/ThemeContext";
 
 type Props = {
   children: React.ReactNode;

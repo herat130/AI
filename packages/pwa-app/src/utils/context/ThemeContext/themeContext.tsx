@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { lsHelper } from "../helpers/localStorageHelper";
+import { lsHelper } from "../../helpers/localStorageHelper";
 
 export type Theme = "light" | "dark";
 
@@ -13,7 +13,7 @@ const defaultValue: ThemeContext = {
   toggleTheme: () => {},
 };
 
-export const ThemeContext = createContext(defaultValue);
+const ThemeContext = createContext(defaultValue);
 
 type Props = {
   children: React.ReactNode;

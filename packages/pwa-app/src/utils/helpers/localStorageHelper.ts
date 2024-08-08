@@ -1,9 +1,21 @@
 class localStorageHelper {
-  checkLocalStorage = () => {
-    return window?.localStorage ? true : false;
+  private checkLocalStorage = () => {
+    try {
+      return window?.localStorage ? true : false;
+    } catch (error) {
+      throw new Error(
+        "Local Storage not available in this browser \n" + navigator.userAgent
+      );
+    }
   };
 
-  setLocalStorageItem = ({ key, value }: { key: string; value: any }) => {
+  public setLocalStorageItem = ({
+    key,
+    value,
+  }: {
+    key: string;
+    value: any;
+  }) => {
     if (!key) {
       throw new Error("please provide a key");
     }
@@ -15,18 +27,22 @@ class localStorageHelper {
     }
   };
 
-  getLocalStorageItem = ({ key }: { key: string }) => {
+  public getLocalStorageItem = ({ key }: { key: string }) => {
     if (this.checkLocalStorage()) {
       const value = localStorage.getItem(key);
       return value ? JSON.parse(value) : value;
     }
   };
 
-  removeFromLocalStorage = (key: string) => {
+  public removeFromLocalStorage = (key: string) => {
     if (!key) {
       throw new Error("Key is required");
     }
     localStorage.removeItem(key);
+  };
+
+  public clearLocalSorage = () => {
+    this.checkLocalStorage() && localStorage.clear();
   };
 }
 
