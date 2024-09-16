@@ -13,7 +13,7 @@ const defaultValue: ThemeContext = {
   toggleTheme: () => {},
 };
 
-const ThemeContext = createContext(defaultValue);
+export const ThemeContext = createContext(defaultValue);
 
 type Props = {
   children: React.ReactNode;

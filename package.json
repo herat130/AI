@@ -16,5 +16,11 @@
     "concurrently": "^8.2.2",
     "lerna": "^8.1.5",
     "nx": "^19.4.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "react-intersection-observer": "^9.13.1",
+    "vite-bundle-visualizer": "^1.2.1"
   }
 }

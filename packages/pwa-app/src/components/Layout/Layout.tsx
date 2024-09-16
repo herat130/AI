@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Header from "./Header";
 import SideBar from "./SideBar";
 import styled from "styled-components";
-import { ThemeContext } from "../../utils/context/ThemeContext";
+import { ThemeContext } from "../../utils/context/themeContext";
 
 type Props = {
   children: React.ReactNode;
@@ -27,7 +27,7 @@ const Content = styled.section`
   min-height: 100vh;
 `;
 
-const ContentWrpper = styled.div`
+const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -45,7 +45,7 @@ export default function Layout({ children }: Props) {
       <SideBar />
       <Content>
         <Header toggleTheme={toggleTheme} theme={theme} />
-        <ContentWrpper>{children}</ContentWrpper>
+        <ContentWrapper>{children}</ContentWrapper>
       </Content>
     </LayoutWrapper>
   );
