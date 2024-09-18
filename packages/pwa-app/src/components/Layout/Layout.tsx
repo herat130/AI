@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Header from "./Header";
 import SideBar from "./SideBar";
 import styled from "styled-components";

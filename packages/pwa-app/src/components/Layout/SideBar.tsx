@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const Logo = styled.div`
@@ -63,16 +62,16 @@ export default function SideBar() {
       <nav>
         <ul>
           <li>
-            <a href="">Home</a>
+            <a href="">Query 1</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="">Query 2</a>
           </li>
           <li>
-            <a href="">OLD </a>
+            <a href="">Query 3 </a>
           </li>
           <li>
-            <a href="">NEW</a>
+            <a href="">Query 4</a>
           </li>
         </ul>
       </nav>

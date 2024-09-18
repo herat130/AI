@@ -1,5 +1,3 @@
-import React from "react";
-
 type Position = "left" | "center" | "right" | "justify";
 
 type Props = {

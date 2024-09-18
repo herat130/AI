@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import { Button, Paragraph } from "ui-library";
 import TypeWriter from "../../components/TypeWriter";
@@ -23,7 +23,7 @@ const QuestionArea = styled.textarea`
 `;
 
 export default function Home() {
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0,
     trackVisibility: true,
     delay: 100,
