@@ -66,3 +66,6 @@ frontend project which has clone of chat GPT
 - add deploy and pre deploy scripts in package.json
 - setup base path for asset in vite config file
 - run command npm run deploy
+
+## Project URL
+- https://herat130.github.io/
