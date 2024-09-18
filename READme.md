@@ -59,3 +59,10 @@ frontend project which has clone of chat GPT
 ## adding jest support
 
 - video ref [https://egghead.io/lessons/jest-adding-jest-with-typescript-support-to-a-vite-application]
+
+
+## deployment to github pages
+- use package gh-pages
+- add deploy and pre deploy scripts in package.json
+- setup base path for asset in vite config file
+- run command npm run deploy
