@@ -13,7 +13,7 @@
     "build:pwa": "npx lerna run build --scope pwa-app --include-filtered-dependencies",
     "clean": "npm cache clean --force && npm prune && npm ci",
     "predeploy": "npm run build:pwa",
-    "deploy": "gh-pages -d build:pwa"
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
