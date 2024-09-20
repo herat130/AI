@@ -1,4 +1,16 @@
+let instance: localStorageHelper;
 class localStorageHelper {
+  constructor() {
+    if (instance) {
+      throw new Error("instance can not be created more than one");
+    }
+    instance = this;
+  }
+
+  private getInstance = () => {
+    return this;
+  };
+
   private checkLocalStorage = () => {
     try {
       return window?.localStorage ? true : false;
@@ -46,4 +58,5 @@ class localStorageHelper {
   };
 }
 
-export const lsHelper = new localStorageHelper();
+const lsHelper = Object.freeze(new localStorageHelper());
+export { lsHelper };
