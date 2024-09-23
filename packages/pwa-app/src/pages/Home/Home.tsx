@@ -21,10 +21,12 @@ const QuestionArea = styled.textarea`
 `;
 
 export default function Home() {
+  console.log(import.meta.env.VITE_APP_HOME_PAGE);
   return (
     <>
       <Content>
         <h2>{import.meta.env.VITE_APP_HOME_PAGE}</h2>
+        <h2>Mode {import.meta.env.MODE}</h2>
         <Button primary={true} label="UI LIB" />
         <Paragraph text="here is a question?" align="right" />
         <Paragraph
