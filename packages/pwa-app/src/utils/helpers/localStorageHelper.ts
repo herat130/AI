@@ -7,10 +7,6 @@ class localStorageHelper {
     instance = this;
   }
 
-  private getInstance = () => {
-    return this;
-  };
-
   private checkLocalStorage = () => {
     try {
       return window?.localStorage ? true : false;
