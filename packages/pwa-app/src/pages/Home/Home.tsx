@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 import { Button, Paragraph } from "ui-library";
 import TypeWriter from "../../components/TypeWriter";
-import { useInView } from "react-intersection-observer";
 
 const Content = styled.div`
   width: 80%;
@@ -23,21 +21,10 @@ const QuestionArea = styled.textarea`
 `;
 
 export default function Home() {
-  const { ref, inView } = useInView({
-    threshold: 0,
-    trackVisibility: true,
-    delay: 100,
-    rootMargin: "10px",
-  });
-
-  useEffect(() => {
-    console.log("in view state " + inView);
-  }, [inView]);
-
   return (
     <>
-      <Content ref={ref}>
-        <h2>This is Home page</h2>
+      <Content>
+        <h2>{import.meta.env.VITE_APP_HOME_PAGE}</h2>
         <Button primary={true} label="UI LIB" />
         <Paragraph text="here is a question?" align="right" />
         <Paragraph
