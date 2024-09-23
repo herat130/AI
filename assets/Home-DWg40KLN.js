@@ -1,0 +1,18 @@
+import{j as i,r as l,p as n}from"./index-Cst-owsI.js";const p=({primary:t=!1,size:e="medium",backgroundColor:s,label:r,...a})=>{const u=t?"storybook-button--primary":"storybook-button--secondary";return i.jsx("button",{type:"button",className:["storybook-button",`storybook-button--${e}`,u].join(" "),style:{backgroundColor:s},...a,children:r})};function o({text:t="",align:e="left",width:s="100%"}){return i.jsx("p",{style:{textAlign:e,width:s},children:t})}const c=n.div`
+  width: 100%;
+  text-align: left;
+`;function d({text:t="",speed:e=100}){const[s,r]=l.useState(t.split(" ")[0]);return l.useEffect(()=>{let a=0;const u=window.setInterval(()=>{a<t.split(" ").length-1?(r(m=>m.concat(` ${t.split(" ")[a]}`)),a++):(console.log("clear interval"),clearInterval(u))},e);return()=>{console.log("clear interval return"),clearInterval(u)}},[]),i.jsx(c,{children:i.jsx("p",{style:{textAlign:"left"},children:s})})}const b=n.div`
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 700px;
+  height: 700px;
+  overflow-y: auto;
+`,x=n.textarea`
+  align-items: flex-end;
+  flex-basis: 90%;
+  width: 80%;
+  min-height: 60px;
+`;function g(){return i.jsxs(i.Fragment,{children:[i.jsxs(b,{children:[i.jsx("h2",{children:"chat GPT Home"}),i.jsx(p,{primary:!0,label:"UI LIB"}),i.jsx(o,{text:"here is a question?",align:"right"}),i.jsx(o,{text:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius alias ut numquam sint id! Dolorem velit quibusdam sapiente? Doloribus perspiciatis placeat hic quis ipsam illum minus, dicta ab! Deserunt voluptatibus pariatur quos doloribus amet iure nihil, laborum cupiditate, corrupti ullam aut, tempore at. Dolorem ratione enim vero iure! Minus, omnis!",align:"justify"}),i.jsx(o,{text:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius alias ut numquam sint id! Dolorem velit quibusdam sapiente? Doloribus perspiciatis placeat hic quis ipsam illum minus, dicta ab! Deserunt voluptatibus pariatur quos doloribus amet iure nihil, laborum cupiditate, corrupti ullam aut, tempore at. Dolorem ratione enim vero iure! Minus, omnis!",align:"justify"}),i.jsx(o,{text:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius alias ut numquam sint id! Dolorem velit quibusdam sapiente? Doloribus perspiciatis placeat hic quis ipsam illum minus, dicta ab! Deserunt voluptatibus pariatur quos doloribus amet iure nihil, laborum cupiditate, corrupti ullam aut, tempore at. Dolorem ratione enim vero iure! Minus, omnis!",align:"justify"}),i.jsx(o,{text:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius alias ut numquam sint id! Dolorem velit quibusdam sapiente? Doloribus perspiciatis placeat hic quis ipsam illum minus, dicta ab! Deserunt voluptatibus pariatur quos doloribus amet iure nihil, laborum cupiditate, corrupti ullam aut, tempore at. Dolorem ratione enim vero iure! Minus, omnis!",align:"justify"}),i.jsx(d,{text:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius alias ut numquam sint id! Dolorem velit quibusdam sapiente? Doloribus perspiciatis placeat hic quis ipsam illum minus, dicta ab! Deserunt voluptatibus pariatur quos doloribus amet iure nihil, laborum cupiditate, corrupti ullam aut, tempore at. Dolorem ratione enim vero iure! Minus, omnis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dicta commodi odit ab ex? Ratione omnis odit incidunt, nemo velit ex adipisci veritatis iure voluptates architecto nobis eligendi quasi consequuntur.",speed:100})]}),i.jsx(x,{name:"question",id:"question",title:"please ask your question here",placeholder:"ask question..."})]})}export{g as default};
