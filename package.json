@@ -16,7 +16,8 @@
     "clean": "npm cache clean --force && npm prune && npm ci",
     "predeploy": "npm run build:pwa-prod",
     "deploy": "gh-pages -d packages/pwa-app/dist",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint:all": "npx lerna run lint"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",

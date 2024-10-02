@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-// @ts-ignore: Unreachable code error
+//@ts-expect-error: Unreachable code error
 // import demo from "ui-library";
-import { Button, Paragraph, NavBar,Input } from "ui-library";
-// @ts-ignore: Unreachable code error
+import { Button, Paragraph, NavBar, Input } from "ui-library";
+//@ts-expect-error: Unreachable code error
 import { fetchData, demo } from "data-layer";
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
       {photos.map(() => {
         return (
           <div key={1}>
-          {/* <div key={photo?.id}> */}
+            {/* <div key={photo?.id}> */}
             {/* <img src={photo?.thumbnailUrl} alt={photo?.title} /> */}
           </div>
         );

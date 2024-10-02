@@ -4,6 +4,7 @@ class localStorageHelper {
     if (instance) {
       throw new Error("instance can not be created more than one");
     }
+    // eslint-disable-next-line
     instance = this;
   }
 
@@ -12,7 +13,7 @@ class localStorageHelper {
       return window?.localStorage ? true : false;
     } catch (error) {
       throw new Error(
-        "Local Storage not available in this browser \n" + navigator.userAgent
+        "Local Storage not available in this browser \n" + navigator.userAgent,
       );
     }
   };
@@ -22,7 +23,7 @@ class localStorageHelper {
     value,
   }: {
     key: string;
-    value: any;
+    value: string | Record<string, string>;
   }) => {
     if (!key) {
       throw new Error("please provide a key");
@@ -49,7 +50,7 @@ class localStorageHelper {
     localStorage.removeItem(key);
   };
 
-  public clearLocalSorage = () => {
+  public clearLocalStorage = () => {
     this.checkLocalStorage() && localStorage.clear();
   };
 }

@@ -2,7 +2,6 @@ import React from "react";
 import { useFormik } from "formik";
 
 const validate = (values) => {
-  debugger;
   const errors = {};
   // if (!values.firstName) {
   //   errors.firstName = 'Required';
@@ -13,7 +12,6 @@ const validate = (values) => {
   if (!values.lastname) {
     errors.lastname = "Required";
   } else if (values.lastname.length > 5) {
-    debugger;
     errors.lastname = "Must be 5 characters or less";
   }
 

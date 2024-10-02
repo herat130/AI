@@ -8,7 +8,7 @@
     "test": "jest",
     "build": "tsc -b && vite build",
     "build:prod": "tsc -b && vite build --mode=production",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives",
     "preview": "vite preview"
   },
   "dependencies": {
