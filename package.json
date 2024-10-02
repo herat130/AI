@@ -9,16 +9,19 @@
     "dev": "concurrently --kill-others \"npm run dev:ui-library\" \"npm run dev:pwa\"",
     "dev:ui-library": "npx lerna run storybook --scope ui-library",
     "dev:pwa": "npx lerna run dev --scope pwa-app",
+    "test:pwa": "npx lerna run test --scope pwa-app",
     "dev:story": "npx lerna run dev --scope ui-library",
     "build:pwa": "npx lerna run build --scope pwa-app --include-dependencies",
     "build:pwa-prod": "npx lerna run build:prod --scope pwa-app --include-dependencies",
     "clean": "npm cache clean --force && npm prune && npm ci",
     "predeploy": "npm run build:pwa-prod",
-    "deploy": "gh-pages -d packages/pwa-app/dist"
+    "deploy": "gh-pages -d packages/pwa-app/dist",
+    "prepare": "husky"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
     "gh-pages": "^6.1.1",
+    "husky": "^9.1.6",
     "lerna": "^8.1.5",
     "nx": "^19.4.1"
   },

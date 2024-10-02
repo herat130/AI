@@ -1,5 +1,7 @@
 import React from "react";
 import { lazy } from "react";
+import User from "../pages/UserForm/User";
+import HookUserForm from "../pages/UserForm/HookUserForm";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const About = lazy(() => import("../pages/About/About"));
@@ -14,6 +16,8 @@ type TRoute = {
 export const publicRoutes: TRoute[] = [
   { id: 1, path: "/", element: <Home /> },
   { id: 2, path: "/home", element: <Home /> },
-  { id: 1, path: "/about", element: <About /> },
-  { id: 1, path: "*", element: <PageNotFound /> },
+  { id: 3, path: "/about", element: <About /> },
+  { id: 4, path: "/user", element: <User /> },
+  { id: 5, path: "/userhook", element: <HookUserForm /> },
+  { id: 10, path: "*", element: <PageNotFound /> },
 ];

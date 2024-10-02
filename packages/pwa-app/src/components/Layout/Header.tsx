@@ -23,6 +23,8 @@ export default function Header({ toggleTheme, theme }: Props) {
   return (
     <HeaderWarapper>
       <Link to="/">Home</Link>
+      <Link to="/user">User</Link>
+      <Link to="/userhook">Hook form</Link>
       <Link to="/about">About</Link>
       {theme === "light" ? (
         <SunIconDark
