@@ -24,7 +24,9 @@
     "gh-pages": "^6.1.1",
     "husky": "^9.1.6",
     "lerna": "^8.1.5",
-    "nx": "^19.4.1"
+    "lint-staged": "^15.2.10",
+    "nx": "^19.4.1",
+    "prettier": "3.3.3"
   },
   "dependencies": {
     "vite-bundle-visualizer": "^1.2.1"
