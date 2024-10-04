@@ -1,14 +1,19 @@
-export default async function fetchData({ url, method }) {
+type HTTPS_METHODS = "GET" | "POST" | "PUT" | "DELETE";
+type FetchParams = { url: string; method: HTTPS_METHODS };
+export default async function fetchData<T>({
+  url,
+  method = "GET",
+}: FetchParams): Promise<T | null> {
   try {
-    debugger;
-    const response = await fetch(url);
+    const response = await fetch(url, { method });
     if (!response.ok) {
       throw new Error("improper response: " + url);
     }
-    console.log("HI!!!!");
-    return await response.json();
+    return (await response.json()) as T;
   } catch (err) {
     console.log("Error", err);
+    // retryFetch();
+    return null;
   }
 }
 

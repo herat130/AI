@@ -2,6 +2,7 @@ import React from "react";
 import { lazy } from "react";
 import User from "../pages/UserForm/User";
 import HookUserForm from "../pages/UserForm/HookUserForm";
+import Albums from "../Albums";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const About = lazy(() => import("../pages/About/About"));
@@ -19,5 +20,6 @@ export const publicRoutes: TRoute[] = [
   { id: 3, path: "/about", element: <About /> },
   { id: 4, path: "/user", element: <User /> },
   { id: 5, path: "/userhook", element: <HookUserForm /> },
+  { id: 5, path: "/albums", element: <Albums /> },
   { id: 10, path: "*", element: <PageNotFound /> },
 ];

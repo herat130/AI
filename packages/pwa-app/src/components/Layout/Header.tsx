@@ -25,6 +25,7 @@ export default function Header({ toggleTheme, theme }: Props) {
       <Link to="/">Home</Link>
       <Link to="/user">User</Link>
       <Link to="/userhook">Hook form</Link>
+      <Link to="/albums">Album</Link>
       <Link to="/about">About</Link>
       {theme === "light" ? (
         <SunIconDark

@@ -19,6 +19,9 @@
     "prepare": "husky",
     "lint:all": "npx lerna run lint"
   },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint --fix"
+  },
   "devDependencies": {
     "concurrently": "^8.2.2",
     "gh-pages": "^6.1.1",
