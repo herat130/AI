@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 // import "./App.css";
 
-// import demo from "ui-library";
+import demo from "ui-library";
 import { Button, Paragraph } from "ui-library";
 
 import { fetchData, demo } from "data-layer";
