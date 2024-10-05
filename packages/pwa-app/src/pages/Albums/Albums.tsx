@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Button, Paragraph } from "ui-library";
 //@ts-expect-error: Unreachable code error
 import { fetchData, demo } from "data-layer";
-import { Album, albumsFactory } from "./utils/factories/albumFactory";
+import { Album, albumsFactory } from "../../utils/factories/albumFactory";
 
 function Albums() {
   const [albums, setAlbums] = useState<Album[]>([]);
@@ -39,7 +39,7 @@ function Albums() {
   }
 
   return (
-    <div>
+    <>
       {/* <Button label="From Storybook" primary={true} />
       <Paragraph text="here is Paragraph From Storybook" /> */}
       <h1>List of Albums</h1>
@@ -50,7 +50,7 @@ function Albums() {
           </article>
         );
       })}
-    </div>
+    </>
   );
 }
 
