@@ -5,7 +5,7 @@ const Logo = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;  
+  align-items: center;
   gap: 20px;
 
   img {
@@ -16,13 +16,16 @@ const Logo = styled.div`
 
 const SidebarWrapper = styled.aside`
   height: 100vh;
-  min-width: 15%;
+  flex: 0.5;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   box-shadow: inset 1px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  position: sticky;
+  left: 0;
+  top: 0;
 
   ul {
     padding: 10px 0;
@@ -35,7 +38,7 @@ const SidebarWrapper = styled.aside`
   li {
     width: 100%;
     list-style-type: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--theme-opposite-color);
   }
 
   a {

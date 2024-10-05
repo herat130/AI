@@ -10,8 +10,12 @@ const HeaderWarapper = styled.header`
   height: 4rem;
   gap: 1rem;
   width: 100%;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--theme-opposite-color);
   align-items: center;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: var(--theme-background-color);
 `;
 
 type Props = {
@@ -23,7 +27,7 @@ export default function Header({ toggleTheme, theme }: Props) {
   return (
     <HeaderWarapper>
       <Link to="/">Home</Link>
-      <Link to="/user">User</Link>
+      <Link to="/user">Formik Form</Link>
       <Link to="/userhook">Hook form</Link>
       <Link to="/albums">Album</Link>
       <Link to="/about">About</Link>

@@ -10,21 +10,21 @@ type Props = {
 
 const LayoutWrapper = styled.main`
   display: flex;
-  height: 100vh;
   margin: 0 auto;
   position: relative;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-start;
+  width: calc(100vw - 5%);
 `;
 
 const Content = styled.section`
   display: flex;
-  flex-basis: 85%;
+  /* flex-basis: 85%; */
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   min-height: 100vh;
+  flex: 3;
 `;
 
 const ContentWrapper = styled.div`

@@ -20,22 +20,25 @@ export default function HookUserForm() {
   const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
 
   return (
-    <form className="hook-form" onSubmit={handleSubmit(onSubmit)}>
-      <input
-        type="text"
-        {...register("firstName", { required: true, maxLength: 20 })}
-      />
-      <input
-        type="text"
-        {...register("lastName", { pattern: /^[A-Za-z]+$/i })}
-      />
-      <input type="number" {...register("age", { min: 18, max: 99 })} />
-      <select {...register("gender")}>
-        <option value="female">female</option>
-        <option value="male">male</option>
-        <option value="other">other</option>
-      </select>
-      <Button type="submit" primary={true} label="UI LIB" />
-    </form>
+    <>
+      <h2>React hook form</h2>
+      <form className="hook-form" onSubmit={handleSubmit(onSubmit)}>
+        <input
+          type="text"
+          {...register("firstName", { required: true, maxLength: 20 })}
+        />
+        <input
+          type="text"
+          {...register("lastName", { pattern: /^[A-Za-z]+$/i })}
+        />
+        <input type="number" {...register("age", { min: 18, max: 99 })} />
+        <select {...register("gender")}>
+          <option value="female">female</option>
+          <option value="male">male</option>
+          <option value="other">other</option>
+        </select>
+        <Button type="submit" primary={true} label="UI LIB" />
+      </form>
+    </>
   );
 }

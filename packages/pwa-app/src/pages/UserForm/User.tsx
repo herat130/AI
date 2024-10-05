@@ -43,7 +43,7 @@ export default function User() {
 
   return (
     <div className="formik-form">
-      <h2>Formik</h2>
+      <h2>Formik Form</h2>
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="name">Name</label>
         <input
@@ -81,7 +81,7 @@ export default function User() {
         />
         <br />
         {formik.touched.lastname && formik.errors.lastname ? (
-          <div>{formik.errors.lastname}</div>
+          <div className="error-msg">{formik.errors.lastname}</div>
         ) : null}
         <br />
         <label htmlFor="email">Email Address</label>
@@ -95,7 +95,7 @@ export default function User() {
         />
         <br />
         {formik.touched.email && formik.errors.email ? (
-          <div>{formik.errors.email}</div>
+          <div className="error-msg">{formik.errors.email}</div>
         ) : null}
         <br />
         <label>

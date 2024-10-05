@@ -16,11 +16,13 @@
 [data-theme="dark"] {
   --theme-background-color: #000;
   --theme-font-color: #fff;
+  --theme-opposite-color: #fff;
 }
 
 [data-theme="light"] {
   --theme-background-color: #fff;
   --theme-font-color: #000;
+  --theme-opposite-color: #000;
 }
 
 body {
@@ -56,10 +58,15 @@ input[type="number"] {
   height: 30px;
 }
 
-.hook-form{
+.hook-form {
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
   justify-content: center;
   gap: 10px;
+}
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
 }
