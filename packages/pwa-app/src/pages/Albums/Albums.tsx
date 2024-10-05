@@ -21,6 +21,7 @@ function Albums() {
           url: "https://jsonplaceholder.typicode.com/albums",
           method: "get",
         });
+        debugger;
         setAlbums(albumsFactory(data));
         setIsLoading(false);
       } catch (error) {
