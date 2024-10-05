@@ -1,34 +1,34 @@
 import { useEffect, useState } from "react";
 // import "./App.css";
 
-import demo from "ui-library";
+// import demo from "ui-library";
 import { Button, Paragraph } from "ui-library";
-
+//@ts-expect-error: Unreachable code error
 import { fetchData, demo } from "data-layer";
 import { Album, albumsFactory } from "./utils/factories/albumFactory";
 
 function Albums() {
   const [albums, setAlbums] = useState<Album[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  if (!isLoading) {
-    useEffect(() => {
-      // demo();
-      const fetchAlbum = async () => {
-        try {
-          setIsLoading(true);
-          const data = await fetchData<Album[]>({
-            url: "https://jsonplaceholder.typicode.com/albums",
-            method: "get",
-          });
-          setAlbums(albumsFactory(data));
-          setIsLoading(false);
-        } catch (error) {
-          setIsLoading(false);
-        }
-      };
-      fetchAlbum();
-    }, []);
-  }
+
+  useEffect(() => {
+    // demo();
+    const fetchAlbum = async () => {
+      debugger;
+      try {
+        setIsLoading(true);
+        const data = await fetchData<Album[]>({
+          url: "https://jsonplaceholder.typicode.com/albums",
+          method: "get",
+        });
+        setAlbums(albumsFactory(data));
+        setIsLoading(false);
+      } catch (error) {
+        setIsLoading(false);
+      }
+    };
+    fetchAlbum();
+  }, []);
 
   if (isLoading) {
     return <div>Loading.....</div>;
