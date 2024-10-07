@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+// @ts-expect-error as types is not defined in data-layer package
 import { fetchData } from "data-layer";
 
 type ParamsData = {

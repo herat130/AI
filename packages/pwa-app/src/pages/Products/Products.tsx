@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import styled from "styled-components";
 import { ProductContext } from "../../utils/context/products/productContext";
 import { LazyLoadImage } from "react-lazy-load-image-component";
