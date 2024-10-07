@@ -1,3 +1,3 @@
 export default function Loader() {
-  return <div>Loding...</div>;
+  return <div>loader inside Layout Loding...</div>;
 }

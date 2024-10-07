@@ -32,7 +32,7 @@ export default function TypeWriter({ text = "", speed = 100 }: Props) {
       console.log("clear interval return");
       clearInterval(intervalId);
     };
-  }, []);
+  }, [speed, text]);
 
   return (
     <TypeWriterWrapper>

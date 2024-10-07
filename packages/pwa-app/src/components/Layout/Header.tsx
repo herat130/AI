@@ -31,6 +31,7 @@ export default function Header({ toggleTheme, theme }: Props) {
       <Link to="/userhook">Hook form</Link>
       <Link to="/albums">Album</Link>
       <Link to="/about">About</Link>
+      <Link to="/products">Products</Link>
       {theme === "light" ? (
         <SunIconDark
           cursor={"pointer"}
