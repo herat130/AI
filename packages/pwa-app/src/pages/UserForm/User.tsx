@@ -1,8 +1,7 @@
-import React from "react";
 import { useFormik } from "formik";
 
-const validate = (values) => {
-  const errors = {};
+const validate = (values: Record<string, string | string[]>) => {
+  const errors: Record<string, string | string[]> = {};
   // if (!values.firstName) {
   //   errors.firstName = 'Required';
   // } else if (values.firstName.length > 15) {
