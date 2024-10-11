@@ -65,7 +65,7 @@ export default function Products() {
         type: "ADD_TO_CART",
         payload: { product: { id, price }, quantity: 1 },
       });
-      dispatch({ type: "CALCULATE_TOTAL" });
+      dispatch({ type: "CALCULATE_TOTAL", payload: { price } });
     };
 
   if (isLoading) {
