@@ -22,7 +22,10 @@ const initialState: Cart = {
 
 function CartReducer(
   cartState: Cart,
-  action: { type: string; payload: Record<string, Product | string | number> }
+  action: {
+    type: string;
+    payload: Record<string, CartProduct | string | number>;
+  }
 ): Cart {
   switch (action.type) {
     case "ADD_TO_CART":
