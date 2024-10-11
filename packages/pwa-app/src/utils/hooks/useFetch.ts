@@ -14,7 +14,7 @@ export function useFetch<T>({ url, method = "GET" }: ParamsData) {
   const [data, setData] = useState<T | null>(null);
 
   useEffect(() => {
-    const fetchAlbum = async () => {
+    const fetchRecord = async () => {
       try {
         setIsLoading(true);
         const response = await fetchData<T>({
@@ -29,7 +29,7 @@ export function useFetch<T>({ url, method = "GET" }: ParamsData) {
         setIsLoading(false);
       }
     };
-    fetchAlbum();
+    fetchRecord();
   }, [url, method]);
 
   return { data, isError, error, isLoading };

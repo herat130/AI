@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { useFetch } from "../../hooks/fetchData";
+import { useFetch } from "../../hooks/useFetch";
 
 type Product = {
   title: string;

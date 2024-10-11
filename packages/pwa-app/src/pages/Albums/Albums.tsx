@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Album, albumsFactory } from "../../utils/factories/albumFactory";
-import { useFetch } from "../../utils/hooks/fetchData";
+import { useFetch } from "../../utils/hooks/useFetch";
 import styled from "styled-components";
 import { useState } from "react";
 
