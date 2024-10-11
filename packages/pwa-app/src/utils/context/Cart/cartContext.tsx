@@ -1,8 +1,10 @@
 import React, { useReducer } from "react";
 import { Product } from "../products/productContext";
 
+type CartProduct = Pick<Product, "id" | "price">;
+
 type CartItem = {
-  product: Pick<Product, "id" | "price">;
+  product: CartProduct;
   quantity: number;
 };
 
@@ -73,7 +75,7 @@ type CartContextType = {
   cartState: Cart;
   dispatch: (action: {
     type: string;
-    payload: Record<string, Product | string | number>;
+    payload: Record<string, CartProduct | string | number>;
   }) => void;
 };
 
