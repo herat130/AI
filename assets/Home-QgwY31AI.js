@@ -1,4 +1,4 @@
-import{j as i,r as l,p as r,B as p}from"./index-DdWugfvQ.js";function e({text:t="",align:s="left",width:a="100%"}){return i.jsx("p",{style:{textAlign:s,width:a},children:t})}const c=r.div`
+import{j as i,r as l,p as r,B as p}from"./index-AfE88UM-.js";function e({text:t="",align:s="left",width:a="100%"}){return i.jsx("p",{style:{textAlign:s,width:a},children:t})}const c=r.div`
   width: 100%;
   text-align: left;
 `;function d({text:t="",speed:s=100}){const[a,n]=l.useState(t.split(" ")[0]);return l.useEffect(()=>{let u=0;const o=window.setInterval(()=>{u<t.split(" ").length-1?(n(m=>m.concat(` ${t.split(" ")[u]}`)),u++):(console.log("clear interval"),clearInterval(o))},s);return()=>{console.log("clear interval return"),clearInterval(o)}},[s,t]),i.jsx(c,{children:i.jsx("p",{style:{textAlign:"left"},children:a})})}const x=r.div`
