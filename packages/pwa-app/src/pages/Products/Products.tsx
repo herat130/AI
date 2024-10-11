@@ -1,13 +1,17 @@
 import { useContext } from "react";
 import styled from "styled-components";
-import { ProductContext } from "../../utils/context/products/productContext";
+import {
+  Product,
+  ProductContext,
+} from "../../utils/context/products/productContext";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Button } from "ui-library";
+import { CartContext } from "../../utils/context/Cart/cartContext";
 
 const Wrapper = styled.section`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
   justify-content: center;
   align-items: center;
   padding: 1rem;
@@ -20,18 +24,28 @@ const Wrapper = styled.section`
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-shadow: 1px 1px 1px 1px #ddd;
-  height: 400px;
   overflow: hidden;
+  cursor: pointer;
   img {
     height: 200px;
     width: 100%;
     object-fit: cover;
     border-radius: 4px;
+  }
+
+  h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 2px 2px #ddd;
   }
 `;
 
@@ -41,7 +55,19 @@ const CardContent = styled.div`
 
 export default function Products() {
   const { products, isLoading } = useContext(ProductContext);
-  console.log({ products });
+  const { cartState, dispatch } = useContext(CartContext);
+  console.log({ products, cartState });
+
+  const handleAddToCart =
+    ({ id, price }: Pick<Product, "id" | "price">) =>
+    () => {
+      dispatch({
+        type: "ADD_TO_CART",
+        payload: { product: { id, price }, quantity: 1 },
+      });
+      dispatch({ type: "CALCULATE_TOTAL" });
+    };
+
   if (isLoading) {
     return <h2>Loading...</h2>;
   }
@@ -66,7 +92,11 @@ export default function Products() {
                   <b>{price}</b>
                 </p>
               </CardContent>
-              <Button backgroundColor="#fff" label="Add to Cart" />
+              <Button
+                onClick={handleAddToCart({ id, price })}
+                backgroundColor="#fff"
+                label="Add to Cart"
+              />
             </Card>
           );
         })}

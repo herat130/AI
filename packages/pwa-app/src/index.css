@@ -16,12 +16,14 @@
 [data-theme="dark"] {
   --theme-background-color: #000;
   --theme-font-color: #fff;
+  --theme-font-opp-color: #fff;
   --theme-opposite-color: #fff;
 }
 
 [data-theme="light"] {
   --theme-background-color: #fff;
   --theme-font-color: #000;
+  --theme-font-opp-color: #000;
   --theme-opposite-color: #000;
 }
 

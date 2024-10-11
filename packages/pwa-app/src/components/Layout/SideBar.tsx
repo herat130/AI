@@ -27,6 +27,10 @@ const SidebarWrapper = styled.aside`
   left: 0;
   top: 0;
 
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
   ul {
     padding: 10px 0;
     display: flex;

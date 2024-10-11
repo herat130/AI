@@ -6,6 +6,8 @@ import Albums from "../pages/Albums/Albums";
 import Products from "../pages/Products/Products";
 import { ProductContextProvider } from "../utils/context/products/productContext";
 import Loader from "../components/Layout/Loader";
+import { CartContextProvider } from "../utils/context/Cart/cartContext";
+import Album from "../pages/Albums/Album";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const About = lazy(() => import("../pages/About/About"));
@@ -25,14 +27,29 @@ export const publicRoutes: TRoute[] = [
   { id: 4, path: "/user", element: <User />, title: "Formik Form" },
   { id: 5, path: "/userhook", element: <HookUserForm />, title: "Hook Form" },
   { id: 5, path: "/albums", element: <Albums />, title: "Albums" },
+  { id: 5, path: "/album/:id", element: <Album />, title: "Album" },
   {
-    id: 5,
+    id: 6,
     path: "/products",
     element: (
       <Suspense fallback={<Loader />}>
         <ProductContextProvider>
-          <Products />
+          <CartContextProvider>
+            <Products />
+          </CartContextProvider>
         </ProductContextProvider>
+      </Suspense>
+    ),
+    title: "Products",
+  },
+  {
+    id: 7,
+    path: "/cart",
+    element: (
+      <Suspense fallback={<Loader />}>
+        <CartContextProvider>
+          <Products />
+        </CartContextProvider>
       </Suspense>
     ),
     title: "Products",

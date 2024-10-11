@@ -13,10 +13,6 @@ export function useFetch<T>({ url, method = "GET" }: ParamsData) {
   const [error, setError] = useState("");
   const [data, setData] = useState<T | null>(null);
 
-  //   if (!isRequired) {
-  //     return;
-  //   }
-
   useEffect(() => {
     const fetchAlbum = async () => {
       try {
@@ -34,7 +30,7 @@ export function useFetch<T>({ url, method = "GET" }: ParamsData) {
       }
     };
     fetchAlbum();
-  }, []);
+  }, [url, method]);
 
   return { data, isError, error, isLoading };
 }

@@ -32,6 +32,7 @@ export default function Header({ toggleTheme, theme }: Props) {
       <Link to="/albums">Album</Link>
       <Link to="/about">About</Link>
       <Link to="/products">Products</Link>
+      <Link to="/cart">Cart</Link>
       {theme === "light" ? (
         <SunIconDark
           cursor={"pointer"}
