@@ -8,6 +8,8 @@ import { ProductContextProvider } from "../utils/context/products/productContext
 import Loader from "../components/Layout/Loader";
 import { CartContextProvider } from "../utils/context/Cart/cartContext";
 import Album from "../pages/Albums/Album";
+import Cart from "../pages/Cart/Cart";
+import Product from "../pages/Products/Product";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const About = lazy(() => import("../pages/About/About"));
@@ -43,16 +45,32 @@ export const publicRoutes: TRoute[] = [
     title: "Products",
   },
   {
+    id: 11,
+    path: "/product/:id",
+    element: (
+      <Suspense fallback={<Loader />}>
+        <ProductContextProvider>
+          <CartContextProvider>
+            <Product />
+          </CartContextProvider>
+        </ProductContextProvider>
+      </Suspense>
+    ),
+    title: "Product",
+  },
+  {
     id: 7,
     path: "/cart",
     element: (
       <Suspense fallback={<Loader />}>
-        <CartContextProvider>
-          <Products />
-        </CartContextProvider>
+        <ProductContextProvider>
+          <CartContextProvider>
+            <Cart />
+          </CartContextProvider>
+        </ProductContextProvider>
       </Suspense>
     ),
-    title: "Products",
+    title: "Cart",
   },
   { id: 10, path: "*", element: <PageNotFound />, title: "Not Found" },
 ];

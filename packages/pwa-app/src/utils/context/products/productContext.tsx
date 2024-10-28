@@ -34,7 +34,7 @@ function ProductContextProvider({ children }: { children: ReactNode }) {
     isError,
     error,
   } = useFetch<Product[]>({ url: PRODUCTS_API, method: "GET" });
-  //   console.log({ objects: { products, isLoading, isError, error } });
+
   return (
     <ProductContext.Provider value={{ products, isLoading, isError, error }}>
       {children}

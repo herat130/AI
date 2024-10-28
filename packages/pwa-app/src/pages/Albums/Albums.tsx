@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 import { Album, albumsFactory } from "../../utils/factories/albumFactory";
 import { useFetch } from "../../utils/hooks/useFetch";
 import styled from "styled-components";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const ALBUMS_API = "https://jsonplaceholder.typicode.com/albums";
-// const ALBUM_PHOTOS_API = "https://jsonplaceholder.typicode.com/photos?albumId=";
 const PAGE_SIZE = 5;
 
 const Wrapper = styled.div`
@@ -60,6 +59,7 @@ function Albums() {
     url: ALBUMS_API,
     method: "GET",
   });
+  const albumsData = useMemo(() => albumsFactory(albums), [albums]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = albums ? Math.ceil(albums.length / 10) : 0;
@@ -73,11 +73,11 @@ function Albums() {
     return <div>Error: {error}</div>;
   }
 
-  if (!albums) {
+  if (!albumsData) {
     return <div>No data found</div>;
   }
 
-  if (albums.length <= 0) {
+  if (albumsData.length <= 0) {
     return <p>Albums not found....</p>;
   }
 
@@ -85,15 +85,13 @@ function Albums() {
     <Wrapper>
       <h1>List of Albums</h1>
 
-      {albumsFactory(albums)
-        .slice(offset, offset + PAGE_SIZE)
-        .map(({ title, id }) => {
-          return (
-            <article className="album" key={id}>
-              <Link to={"/album/" + id}>{title}</Link>
-            </article>
-          );
-        })}
+      {albumsData.slice(offset, offset + PAGE_SIZE).map(({ title, id }) => {
+        return (
+          <article className="album" key={id}>
+            <Link to={"/album/" + id}>{title}</Link>
+          </article>
+        );
+      })}
 
       <Pagination>
         <button

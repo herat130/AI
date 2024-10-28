@@ -2,7 +2,7 @@ type Album = {
   title: string;
   id: number;
 };
-function albumsFactory(data: Album[]) {
+function albumsFactory(data: Album[] | null): Album[] {
   if (!data) {
     return [];
   }
